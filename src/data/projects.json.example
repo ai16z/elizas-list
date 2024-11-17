@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": "ai-art-generator",
+      "name": "AI Art Generator",
+      "description": "Create beautiful AI-generated artwork using stable diffusion. Supports multiple styles and can export in high resolution.",
+      "projectUrl": "https://ai-art-gen.vercel.app",
+      "github": "https://github.com/sarah-chen/ai-art-generator",
+      "image": "/project-images/ai-art-generator.png",
+      "author": {
+        "name": "Sarah Chen",
+        "github": "https://github.com/sarah-chen",
+        "twitter": "https://x.com/sarahcodes"
+      },
+      "donation": {
+        "transactionHash": "0x1234567890abcdef1234567890abcdef12345678",
+        "amount": "0.5 ETH",
+        "date": "2024-03-21T00:00:00Z"
+      },
+      "tags": ["AI", "React", "Python", "Machine Learning"],
+      "addedOn": "2024-03-21T00:00:00Z",
+      "metrics": {
+        "stars": 342,
+        "forks": 89
+      }
+    },
+    {
+      "id": "defi-dashboard",
+      "name": "DeFi Portfolio Dashboard",
+      "description": "Track your DeFi investments across multiple chains with real-time updates and performance analytics.",
+      "projectUrl": "https://defi-tracker.xyz",
+      "github": "https://github.com/crypto-dev/defi-dashboard",
+      "image": "/project-images/defi-dashboard.png",
+      "author": {
+        "name": "Alex Thompson",
+        "github": "https://github.com/crypto-dev",
+        "twitter": "https://x.com/alexdefi"
+      },
+      "donation": {
+        "transactionHash": "0x2345678901abcdef2345678901abcdef23456789",
+        "amount": "1.2 ETH",
+        "date": "2024-03-19T00:00:00Z"
+      },
+      "tags": ["Web3", "React", "TypeScript", "Blockchain"],
+      "addedOn": "2024-03-19T00:00:00Z",
+      "metrics": {
+        "stars": 567,
+        "forks": 123
+      }
+    },
+    {
+      "id": "code-mentor-ai",
+      "name": "Code Mentor AI",
+      "description": "AI-powered coding tutor that helps beginners learn programming through interactive exercises and real-time feedback.",
+      "projectUrl": "https://codementor-ai.dev",
+      "github": "https://github.com/maria-ai/code-mentor",
+      "image": "/project-images/code-mentor.png",
+      "author": {
+        "name": "Maria Rodriguez",
+        "github": "https://github.com/maria-ai",
+        "twitter": "https://x.com/mariacodes"
+      },
+      "donation": {
+        "transactionHash": "0x3456789012abcdef3456789012abcdef34567890",
+        "amount": "0.8 ETH",
+        "date": "2024-03-18T00:00:00Z"
+      },
+      "tags": ["AI", "Education", "JavaScript", "Python"],
+      "addedOn": "2024-03-18T00:00:00Z",
+      "metrics": {
+        "stars": 892,
+        "forks": 234
+      }
+    },
+    {
+      "id": "nft-marketplace",
+      "name": "NFT Marketplace Kit",
+      "description": "Open-source NFT marketplace template with built-in support for multiple chains, lazy minting, and royalties.",
+      "projectUrl": "https://nft-marketplace-kit.com",
+      "github": "https://github.com/web3-dev/nft-marketplace",
+      "image": "/project-images/nft-marketplace.png",
+      "author": {
+        "name": "James Wilson",
+        "github": "https://github.com/web3-dev",
+        "twitter": "https://x.com/jamesweb3"
+      },
+      "donation": {
+        "transactionHash": "0x4567890123abcdef4567890123abcdef45678901",
+        "amount": "2.0 ETH",
+        "date": "2024-03-17T00:00:00Z"
+      },
+      "tags": ["Web3", "NFT", "Solidity", "Next.js"],
+      "addedOn": "2024-03-17T00:00:00Z",
+      "metrics": {
+        "stars": 445,
+        "forks": 98
+      }
+    },
+    {
+      "id": "3d-game-engine",
+      "name": "WebGL Game Engine",
+      "description": "Lightweight 3D game engine built with WebGL and TypeScript. Includes physics, particle systems, and shader support.",
+      "projectUrl": "https://webgl-engine.dev",
+      "github": "https://github.com/lisa-game/webgl-engine",
+      "image": "/project-images/game-engine.png",
+      "author": {
+        "name": "Lisa Park",
+        "github": "https://github.com/lisa-game",
+        "twitter": "https://x.com/lisagames"
+      },
+      "donation": {
+        "transactionHash": "0x5678901234abcdef5678901234abcdef56789012",
+        "amount": "0.3 ETH",
+        "date": "2024-03-16T00:00:00Z"
+      },
+      "tags": ["WebGL", "TypeScript", "Game Development", "3D"],
+      "addedOn": "2024-03-16T00:00:00Z",
+      "metrics": {
+        "stars": 789,
+        "forks": 178
+      }
+    },
+    {
+      "id": "smart-home-hub",
+      "name": "Smart Home Hub",
+      "description": "Open-source smart home controller supporting multiple protocols like Zigbee, Z-Wave, and Matter. Easy to set up and customize.",
+      "projectUrl": "https://smart-home-hub.io",
+      "github": "https://github.com/david-iot/smart-home",
+      "image": "/project-images/smart-home.png",
+      "author": {
+        "name": "David Kumar",
+        "github": "https://github.com/david-iot",
+        "twitter": "https://x.com/davidiot"
+      },
+      "donation": {
+        "transactionHash": "0x6789012345abcdef6789012345abcdef67890123",
+        "amount": "0.6 ETH",
+        "date": "2024-03-15T00:00:00Z"
+      },
+      "tags": ["IoT", "React", "Node.js", "Hardware"],
+      "addedOn": "2024-03-15T00:00:00Z",
+      "metrics": {
+        "stars": 567,
+        "forks": 123
+      }
+    }
+  ]
+} 

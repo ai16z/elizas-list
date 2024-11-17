@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "degen-spartan-ai",
+      "name": "Degen Spartan AI",
+      "description": "The First Eliza",
+      "projectUrl": "https://t.me/degenspartan",
+      "github": "https://github.com/ai16z/eliza",
+      "image": "/project-images/degenai.png",
+      "author": {
+        "name": "Shaw",
+        "github": "https://github.com/lalalun",
+        "twitter": "https://x.com/shawmakesmagic"
+      },
+      "donation": {
+        "transactionHash": "0x1234567890abcdef1234567890abcdef12345678",
+        "amount": "10000000",
+        "date": "2024-10-31T00:00:00Z"
+      },
+      "tags": ["AI", "Machine Learning"],
+      "addedOn": "2024-03-21T00:00:00Z",
+      "metrics": {
+        "stars": 342,
+        "forks": 89
+      }
+    },
+    {
+      "id": "pmairca",
+      "name": "PMARICA",
+      "description": "Marc AIndreeson",
+      "projectUrl": "https://t.me/ai16z",
+      "github": "https://github.com/ai16z/eliza",
+      "image": "/project-images/marcai.png",
+      "author": {
+        "name": "Shaw",
+        "github": "https://github.com/lalalun",
+        "twitter": "https://x.com/shawmakesmagic"
+      },
+      "donation": {
+        "transactionHash": "0x1234567890abcdef1234567890abcdef12345678",
+        "amount": "10000000",
+        "date": "2024-10-31T00:00:00Z"
+      },
+      "tags": ["AI", "Machine Learning"],
+      "addedOn": "2024-03-21T00:00:00Z",
+      "metrics": {
+        "stars": 342,
+        "forks": 89
+      }
+    }
+  ]
+}

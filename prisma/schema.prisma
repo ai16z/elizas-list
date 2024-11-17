@@ -1,0 +1,178 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  slug        String   @unique
+  isPublic    Boolean  @default(true)
+  status      String   @default("ACTIVE")
+  addedOn     DateTime @default(now())
+
+  views              ProjectView[]
+  sourceInteractions ProjectInteraction[] @relation("SourceProject")
+  targetInteractions ProjectInteraction[] @relation("TargetProject")
+  tags               Tag[]
+  metrics           ProjectMetrics?
+  abTests           ABTest[]
+
+  @@index([createdAt])
+  @@index([status, isPublic])
+  @@index([name])
+}
+
+model ProjectView {
+  id        String   @id @default(cuid())
+  timestamp DateTime @default(now())
+  userAgent String?
+  ipAddress String?
+  sessionId String?
+  referrer  String?
+  duration  Int?     // Session duration in seconds
+  bounced   Boolean  @default(false)
+  
+  project   Project  @relation(fields: [projectId], references: [id])
+  projectId String
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+
+  @@index([timestamp])
+  @@index([projectId, timestamp])
+  @@index([userId, timestamp])
+  @@index([sessionId])
+}
+
+model ProjectInteraction {
+  id        String   @id @default(cuid())
+  timestamp DateTime @default(now())
+  type      String
+  metadata  Json?    // Additional interaction data
+  
+  sourceProject   Project @relation("SourceProject", fields: [sourceProjectId], references: [id])
+  sourceProjectId String
+  
+  targetProject   Project @relation("TargetProject", fields: [targetProjectId], references: [id])
+  targetProjectId String
+  
+  userId    String?
+  user      User?   @relation(fields: [userId], references: [id])
+
+  @@index([timestamp])
+  @@index([type, timestamp])
+  @@index([sourceProjectId, targetProjectId])
+  @@index([userId, timestamp])
+}
+
+model User {
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  lastActive    DateTime @default(now())
+  segment       String?  // User segment classification
+  preferences   Json?    // User preferences and settings
+  
+  projectViews      ProjectView[]
+  interactions      ProjectInteraction[]
+  searchQueries     SearchQuery[]
+  behaviors         UserBehavior[]
+  abTestVariants    ABTestVariant[]
+
+  @@index([createdAt])
+  @@index([segment])
+  @@index([lastActive])
+}
+
+model SearchQuery {
+  id        String   @id @default(cuid())
+  query     String
+  timestamp DateTime @default(now())
+  results   Int      // Number of results returned
+  clicked   Boolean  @default(false)
+  
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+
+  @@index([query])
+  @@index([timestamp])
+  @@index([userId, timestamp])
+}
+
+model UserBehavior {
+  id        String   @id @default(cuid())
+  type      String
+  data      Json?
+  timestamp DateTime @default(now())
+  sessionId String?
+  platform  String?  // Web, mobile, etc.
+  
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([type, timestamp])
+  @@index([userId, timestamp])
+  @@index([sessionId])
+}
+
+model Tag {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  category    String?   // Tag category/type
+  popularity  Int       @default(0)
+  projects    Project[]
+
+  @@index([name])
+  @@index([popularity])
+}
+
+model ProjectMetrics {
+  id            String   @id @default(cuid())
+  stars         Int      @default(0)
+  forks         Int      @default(0)
+  views         Int      @default(0)
+  interactions  Int      @default(0)
+  score         Float?   // Engagement score
+  lastUpdated   DateTime @default(now())
+  
+  project       Project  @relation(fields: [projectId], references: [id])
+  projectId     String   @unique
+
+  @@index([score])
+  @@index([lastUpdated])
+}
+
+model ABTest {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  startDate   DateTime @default(now())
+  endDate     DateTime?
+  status      String   @default("ACTIVE")
+  
+  project     Project  @relation(fields: [projectId], references: [id])
+  projectId   String
+  variants    ABTestVariant[]
+
+  @@index([status])
+  @@index([projectId, status])
+}
+
+model ABTestVariant {
+  id          String   @id @default(cuid())
+  name        String
+  config      Json
+  weight      Float    @default(1.0)
+  
+  test        ABTest   @relation(fields: [testId], references: [id])
+  testId      String
+  users       User[]
+
+  @@index([testId])
+} 
