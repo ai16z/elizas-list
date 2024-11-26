@@ -1,52 +1,25 @@
 {
-  "projects": [
-    {
-      "id": "degen-spartan-ai",
-      "name": "Degen Spartan AI",
-      "description": "The First Eliza",
-      "projectUrl": "https://t.me/degenspartan",
-      "github": "https://github.com/ai16z/eliza",
-      "image": "/project-images/degenai.png",
-      "author": {
-        "name": "Shaw",
-        "github": "https://github.com/lalalun",
-        "twitter": "https://x.com/shawmakesmagic"
-      },
-      "donation": {
-        "transactionHash": "0x1234567890abcdef1234567890abcdef12345678",
-        "amount": "10000000",
-        "date": "2024-10-31T00:00:00Z"
-      },
-      "tags": ["AI", "Machine Learning"],
-      "addedOn": "2024-03-21T00:00:00Z",
-      "metrics": {
-        "stars": 342,
-        "forks": 89
-      }
+    "id": "cumfart-ai",
+    "name": "CUMFART AI",
+    "description": "The Future is now.",
+    "projectUrl": "https://t.me/CUMFARTPORTAL",
+    "github": "",
+    "image": "/project-images/CUMFARTAI.png",
+    "author": {
+      "name": "MeltedMindz",
+      "github": "https://github.com/MeltedMindz",
+      "twitter": "https://x.com/meltedmindz"
     },
-    {
-      "id": "pmairca",
-      "name": "PMARICA",
-      "description": "Marc AIndreeson",
-      "projectUrl": "https://t.me/ai16z",
-      "github": "https://github.com/ai16z/eliza",
-      "image": "/project-images/marcai.png",
-      "author": {
-        "name": "Shaw",
-        "github": "https://github.com/lalalun",
-        "twitter": "https://x.com/shawmakesmagic"
-      },
-      "donation": {
-        "transactionHash": "0x1234567890abcdef1234567890abcdef12345678",
-        "amount": "10000000",
-        "date": "2024-10-31T00:00:00Z"
-      },
-      "tags": ["AI", "Machine Learning"],
-      "addedOn": "2024-03-21T00:00:00Z",
-      "metrics": {
-        "stars": 342,
-        "forks": 89
-      }
-    }
-  ]
-}
+    "donation": {
+      "transactionHash": "4hQPU3Ax6a5tqQCaCvppL7GRzT2phbaPYSaKHRaNf6ZaZnUhsgVGZetFxeuuNSvbee8k7DgjwHN5KBcz3xYur6Uo",
+      "amount": "50000000",
+      "date": "2024-11-24T02:53:38Z"
+    },
+    "tags": ["AI", "Machine Learning", "humor"],
+    "addedOn": "2024-03-21T00:00:00Z",
+    "metrics": {
+      "stars": 0,
+      "forks": 0
+    },
+    "demo": "https://vvaifu.fun/character/67429113e92646e7deb85a58"
+  }
